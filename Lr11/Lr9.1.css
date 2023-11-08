@@ -1,0 +1,80 @@
+body{
+    min-width: 300px;
+    margin:auto;
+    width:30%;
+    background: linear-gradient(45deg, #F2CF58, #F11F61)
+}
+
+input[type = email], input[type = date], input[type = text], input[type = number], input[type = password]{
+    border: none;
+    border-radius: 12px;
+}
+
+input[type=submit], input[type=file], input[type=reset] {
+    background-color: #ffffff;
+    border: none;
+    color: rgb(0, 0, 0);
+    border-radius: 12px;
+    padding: 8px 12px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+
+  
+input:focus{
+    color: red;
+    border-color: white;
+}
+
+@font-face {
+	font-family: 'NeverSmile';
+	src: url('fonts/NeverSmile.otf'); 
+}
+
+h1, p, p input, input[type=reset], label{
+    font-family: NeverSmile; 
+}
+
+.valid, .invalid{
+	display: none;
+}
+
+form:invalid input[type='submit']{
+	display: none;
+}
+
+#firstname:valid~.valid, #email:valid~.valid, #old:valid~.valid{
+	display: inline-block;
+}
+
+#firstname:invalid~.invalid, #email:invalid~.invalid, #old:invalid~.invalid{
+	display: inline-block;
+}
+
+#firstname:valid, #email:valid,  #old:valid{
+	border: solid 3px #ffffff;
+}
+
+#firstname:invalid, #email:invalid, #old:invalid{
+	border:  solid 3px #000000;
+}
+
+.error{
+    animation-duration: 2s;
+    animation-name: slidein;
+  }
+  
+  @keyframes slidein {
+    from {
+      transform: translateX(50%);
+      width: 50%;
+      
+    }
+  
+    to {
+      transform: translateX(0%);
+      width: 50%;
+    }
+  }

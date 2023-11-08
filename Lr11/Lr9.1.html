@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--
+Политехнический колледж городского хозяйства
+МДК.08.01 Проектирование и разработка интерфейсов пользователей
+Практическая работа №
+Студент гр. ИР-19-4
+ФИО
+Преподаватель Левит Л.В., Л.В. Ильюшенков
+-->
+<html lang="en">
+<head>
+	<title>Опрос про аниме</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="">
+    <link rel="stylesheet" href="Lr9.1.css">
+
+
+	
+</head>
+
+<body>
+	<header>
+		<h1>Опрос по аниме</h1>
+	</header>
+	<main>
+		<form id ="form" name ="opros" method="#" enctype="text/plain">
+			<div>
+				<p>Введите ваш email</p>
+				<input name="email" type="email" id="email">
+				<div class='valid'>&#9989;</div>
+				<div class='invalid error'>&#10060 Введите свою почту</div>
+			</div>
+			<p>Ты смотришь аниме?</p>
+			<p><input id="da" checked name="da" type="radio" value="da">да</p>
+			<p><input name="da" type="radio" value="net">нет</p>
+			<p>Когда ты начал смотреть аниме?</p>
+			<p><input name="date" type="date" min="1917-05-01" max="2023-09-15"></p>
+			<div>
+				<label for="firstname">Напишите любимые жанры(вводить кирилицей через запятую)</label><br>
+				<input name="firstname" type="text" id="firstname" required pattern="^[А-Яа-я,]+$">
+				<div class='valid'>&#9989;</div>
+				<div class='invalid error'>&#10060 Вводить кирилицей через запятую</div>
+			</div>
+			<div>
+				<p>Сколько лет вы смотрите аниме?</p>
+				<input name="old" id="old" type="number" min="0" max="60">
+				<div class='valid'>&#9989;</div>
+				<div class='invalid error'>&#10060 Введите от 0 до 60</div>
+			</div> 
+			<br>
+			<select id="janry-select" name = "janry">
+			<option value="">--Выберите ваш любимый возростной жанр--</option>
+			<option value="Сёнен">Сёнен</option>
+			<option value="Сёдза">Сёдза</option>
+			<option value="Сейнен">Сейнен</option>
+			</select><br>
+			<p>Какие ваши любимые аниме режисёрры?</p>
+			<p><input name="bla" type="checkbox" value="Хаяо Миадзаки">Хаяо Миадзаки</p>
+			<p><input name="bla" type="checkbox" value="Макото Синкай">Макото Синкай</p>
+			<p><input name="bla" type="checkbox" value="Сатоси Кон">Сатоси Кон</p>
+			<p>Введите самое произносимое слово в Ван писе</p>
+			<p><input name="password" type="password"></p>
+			<p>Какую длительность серии ты предпочитаешь?</p>
+			<p><input name="time" type="radio" value="21:00">21:00</p>
+			<p><input name="time" type="radio" value="22:00">22:00</p>
+			<p><input name="time" type="radio" value="23:00">23:00</p>
+			<p><input name="time" type="radio" value="24:00">24:00</p>
+			<br>
+			<label>Прикрепите изображение вашего любимого персонажа</label>
+			<p><input type="file" name="character"><br>
+			<br>
+			<input type="submit" value="Отправить"></p>
+			<input type="reset" value="Сбросить">
+		</form>
+	</main>
+	<script src="index.js"></script>
+</body>
+</html>
